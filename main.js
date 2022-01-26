@@ -25,7 +25,7 @@ function generate() {
 var triesPerSecond = document.getElementById('speed').value //self explanatory
 getGiftCode = function () {
     let code = '';
-    let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNQRSTUVWXYZ0123456789';
+    let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     for(var i = 0; i < 24; i++){
         code += dict.charAt(Math.floor(Math.random() * dict.length));
     }
