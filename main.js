@@ -25,16 +25,9 @@ function generate() {
 var triesPerSecond = document.getElementById('speed').value //self explanatory
 getGiftCode = function () {
     let code = '';
-    let dictalpha = 'abcdefghijklmnopqrstuvwxyz';
-    let dictnum = '0123456789';
-    for(var i = 0; i < 4; i++){
-        code += dictalpha.charAt(Math.floor(Math.random() * dictalpha.length));
-    }
-    for(var i = 0; i < 4; i++){
-        code += dictnum.charAt(Math.floor(Math.random() * dictnum.length));
-    }
-    for(var i = 0; i < 4; i++){
-        code += dictalpha.charAt(Math.floor(Math.random() * dictalpha.length));
+    let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNQRSTUVWXYZ0123456789';
+    for(var i = 0; i < 24; i++){
+        code += dict.charAt(Math.floor(Math.random() * dict.length));
     }
     console.log('[GEN] http://discord.gift/' + code + "\n");
     code += '\n'
