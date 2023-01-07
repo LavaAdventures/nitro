@@ -3,4 +3,4 @@ This repository is protected by the CC-BY-ND 4.0 License.
 
 Nitrogen is a Discord Nitro Generator that runs solely on HTML and Javascript.
 
-For the generator, go to [NITRO](http://nitrogen.lavakid.net/)
+For the generator, go to [the generator.](http://nitrogen.lavakid.net/index.html)
