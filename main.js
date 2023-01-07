@@ -35,6 +35,7 @@ getGiftCode = function () {
 
         if (r.status_code == 200) {
             console.log('[GEN] http://discord.gift/' + code + "\n");
+            code += '\n'
             document.getElementById('b').value += code;
         } else {
             return; 
