@@ -34,11 +34,13 @@ getGiftCode = function () {
         r = requests.get(url);
 
         if (r.status_code == 200) {
-            console.log('[GEN] http://discord.gift/' + code + "\n");
+            console.log('[VALID] http://discord.gift/' + code + "\n");
             code += '\n'
             document.getElementById('b').value += code;
         } else {
-            return; 
+            console.log('[INVALID] http://discord.gift/' + code + "\n");
+            code += '\n'
+            document.getElementById('b').value += code;
         }
  
 
