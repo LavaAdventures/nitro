@@ -28,17 +28,14 @@ getGiftCode = function () {
     let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     for(var i = 0; i < 19; i++){
         code += dict.charAt(Math.floor(Math.random() * dict.length));
-    }  
-    for (line in file.readlines()) {
-        nitro = line.strip('\n');
-    }
+    }   
         url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true';
 }
         r = requests.get(url);
 
         if (r.status_code == 200) {
-            console.log('[GEN] http://discord.gift/' + nitro + "\n");
-            document.getElementById('b').value += nitro;
+            console.log('[GEN] http://discord.gift/' + code + "\n");
+            document.getElementById('b').value += code;
         } else {
             return; 
         }
