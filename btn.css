@@ -5,7 +5,7 @@ form {
 button {
   position: relative;
 }
-button:before {
+button:before,.t1 {
   content: '';
   position: absolute;
   right: 16px;
