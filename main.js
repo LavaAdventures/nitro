@@ -29,7 +29,7 @@ getGiftCode = function () {
     for(var i = 0; i < 21; i++){
         code += dict.charAt(Math.floor(Math.random() * dict.length));
     }   
-        let url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}';
+    /*let url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}';
 } 
         let r = requests.get(url);
 
@@ -42,7 +42,7 @@ getGiftCode = function () {
             code += '\n'
             document.getElementById('b').value += code;
         }
- 
+ */
             console.log('[VALID] http://discord.gift/' + code + "\n");
             code += '\n'
             document.getElementById('b').value += code;
