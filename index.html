@@ -11,6 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
 <link rel="stylesheet" type="text/css" href="btn.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="btn.js" type="text/javascript"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
 <style>
@@ -22,8 +23,9 @@ textarea {
   background-color: #1f1f1f;
 } 
 }
- 
- 
+button {
+  display:inline-block;
+}
 
 .button0 {
   font-size:20px;
@@ -56,7 +58,7 @@ input {
 <div>
 <h1 style="font-family: Rubik; color: #ffffff">Lava's Discord Nitro Generator</h1>
 <textarea id="a" rows="11" cols="100" readonly style="resize: none;">
-Thanks for using [NitroGen](http://reallava.github.io/nitro/index.html)
+Thanks for using [Lava's Nitro Generator](http://reallava.github.io/nitro/index.html)
   
 ―――――――――――――――――――――――――――――――――――――――
 [INFO] Lava's Nitro Code Generator
@@ -68,15 +70,15 @@ Thanks for using [NitroGen](http://reallava.github.io/nitro/index.html)
 
 </textarea>
 <br>
-<button id='generate' class="button">
+<button type="submit" id='generate' class="button btn btn-primary btn-lg btn-block">
   Start Generating
 </button>
 <p></p>
-<button id='stop' class="button">
+<button type="submit" id='stop' class="button btn btn-danger btn-lg btn-block">
   Stop Generating
 </button>
     <p></p>
-<button id='save' onclick="var rows = document.getElementById('b').value.split('\n').length -  1; download(rows + ' Unchecked Nitro Codes.txt', 'Dumped by [NitroGen](http://sitesgithub.github.io/nitro/index0.html)\n\n' + document.getElementById('b').value + '\nDumped by [NitroGen](http://sitesgithub.github.io/nitro/index.html)')" class="button">Make Log Dump</button>
+<button type="submit" id='save' class="button btn btn-secondary btn-lg btn-block" onclick="var rows = document.getElementById('b').value.split('\n').length -  1; download(rows + ' Unchecked Nitro Codes.txt', 'Dumped by [NitroGen](http://sitesgithub.github.io/nitro/index0.html)\n\n' + document.getElementById('b').value + '\nDumped by [NitroGen](http://sitesgithub.github.io/nitro/index.html)')" class="button">Make Log Dump</button>
     <p></p>
 <button onclick="stop(); document.getElementById('a').value = 'Thanks for using [LavaNitroGen](http://nitrogen.lavakid.net)\n\n―――――――――――――――――――――――――――――――――――――――\n[INFO] Discord Code Generator\n[INFO] Discord Codes will be here.\n[INFO] MOST CODES DO NOT WORK!\n―――――――――――――――――――――――――――――――――――――――\n\n'; document.getElementById('b').value = '';" class="button" id="clear">Clear Log</button>
 <textarea style="display: none;" id="b" rows="11" cols="100" readonly>
