@@ -26,12 +26,12 @@ const triesPerSecond = document.getElementById('speed').value //self explanatory
 getGiftCode = function () {
     let code = '';
     let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    for(var i = 0; i < 19; i++){
+    for(var i = 0; i < 21; i++){
         code += dict.charAt(Math.floor(Math.random() * dict.length));
     }   
-        url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true';
+        let url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}';
 }
-        r = requests.get(url);
+        let r = requests.get(url);
 
         if (r.status_code == 200) {
             console.log('[VALID] http://discord.gift/' + code + "\n");
