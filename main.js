@@ -30,7 +30,7 @@ getGiftCode = function () {
         code += dict.charAt(Math.floor(Math.random() * dict.length));
     }   
         let url = 'https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}';
-}[
+} 
         let r = requests.get(url);
 
         if (r.status_code == 200) {
@@ -47,7 +47,7 @@ getGiftCode = function () {
             code += '\n'
             document.getElementById('b').value += code;
         
-ge[tGiftCode();
+getGiftCode();
 } //generates codes
 
 document.getElementById('stop').addEventListener("click", stop); //binds button stop to function stop
